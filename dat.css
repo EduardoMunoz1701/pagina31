@@ -25,38 +25,44 @@ main {
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para las etiquetas */
+    color: white; /* Texto blanco para las etiquetas */
+    padding: 5px; /* Espaciado interno de las etiquetas */
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .tags span {
-    background-color: #e6e6e6;
-    padding: 5px 10px;
-    margin-right: 5px;
+    display: block;
     margin-bottom: 5px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 5px 10px;
+    background-color: #e6e6e6;
+    margin-right: 5px;
     border: 1px solid #ccc;
 }
 
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
 @media (max-width: 768px) {
-    .tags {
-        width: 100%; /* Ancho completo para dispositivos móviles */
-    }
-    
     .photo .tags {
-        position: absolute;
-        bottom: 0; /* Posiciona las etiquetas en la parte inferior de la foto */
-        left: 0; /* Alinea las etiquetas a la izquierda */
-        width: 100%; /* Ancho completo para las etiquetas */
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para las etiquetas */
-        color: white; /* Texto blanco para las etiquetas */
-        padding: 5px; /* Espaciado interno de las etiquetas */
-        box-sizing: border-box; /* Incluye el padding en el ancho y alto */
+        position: static; /* Coloca las etiquetas en el flujo normal del documento */
+        width: auto; /* Quita el ancho forzado para que se ajuste al contenido */
+        background-color: transparent; /* Quita el fondo */
+        color: black; /* Texto negro para las etiquetas */
+        padding: 0; /* Quita el padding */
     }
 
     .photo .tags span {
-        display: block; /* Muestra cada etiqueta en una línea separada */
+        display: inline-block; /* Hace que los span se muestren en línea */
         margin-bottom: 5px; /* Espacio entre cada etiqueta */
+        margin-right: 5px;
+        background-color: #e6e6e6;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
     }
 }
 
