@@ -16,7 +16,6 @@ main {
 
 .photo {
     margin-bottom: 20px;
-    position: relative; /* Para poder posicionar las etiquetas con respecto a la foto */
 }
 
 .photo img {
@@ -25,44 +24,22 @@ main {
 }
 
 .tags {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para las etiquetas */
-    color: white; /* Texto blanco para las etiquetas */
-    padding: 5px; /* Espaciado interno de las etiquetas */
-    box-sizing: border-box; /* Incluye el padding en el ancho y alto */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tags span {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 5px 10px;
     background-color: #e6e6e6;
+    padding: 5px 10px;
     margin-right: 5px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
 }
 
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
 @media (max-width: 768px) {
-    .photo .tags {
-        position: static; /* Coloca las etiquetas en el flujo normal del documento */
-        width: auto; /* Quita el ancho forzado para que se ajuste al contenido */
-        background-color: transparent; /* Quita el fondo */
-        color: black; /* Texto negro para las etiquetas */
-        padding: 0; /* Quita el padding */
-    }
-
-    .photo .tags span {
-        display: inline-block; /* Hace que los span se muestren en línea */
-        margin-bottom: 5px; /* Espacio entre cada etiqueta */
-        margin-right: 5px;
-        background-color: #e6e6e6;
-        padding: 5px 10px;
-        border: 1px solid #ccc;
+    .tags {
+        width: 100%; /* Ancho completo para dispositivos móviles */
     }
 }
 
