@@ -25,39 +25,31 @@ main {
 }
 
 .tags {
-    display: flex;
-    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Abarca el ancho completo */
+    text-align: center; /* Centra horizontalmente las etiquetas */
 }
 
 .tags span {
+    display: block;
     background-color: #e6e6e6;
     padding: 5px 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 0 auto 5px; /* Centra verticalmente y agrega espacio inferior */
     border: 1px solid #ccc;
 }
 
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
 @media (max-width: 768px) {
-    .photo {
-        position: relative; /* Establece la posición relativa para las etiquetas */
-    }
-
     .tags {
-        display: block; /* Cambia el comportamiento a bloque */
-        position: absolute;
-        bottom: 0;
-        width: 100%; /* Abarca el ancho completo */
-        text-align: center; /* Centra horizontalmente las etiquetas */
+        position: static; /* Cambia la posición a estática para que se apilen debajo de la imagen */
+        width: auto; /* Restaura el ancho automático */
     }
 
     .tags span {
         display: inline-block; /* Cambia el comportamiento a en línea */
-        background-color: #e6e6e6;
-        padding: 5px 10px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        border: 1px solid #ccc;
+        margin-right: 5px; /* Restaura el margen derecho */
     }
 }
 
