@@ -64,4 +64,10 @@ main {
     .photo {
         margin-bottom: 0;
     }
+
+    .tags {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }
