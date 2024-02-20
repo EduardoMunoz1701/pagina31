@@ -16,6 +16,7 @@ main {
 
 .photo {
     margin-bottom: 20px;
+    position: relative; /* Asegura que las etiquetas estén posicionadas relativas a .photo */
 }
 
 .photo img {
@@ -39,7 +40,18 @@ main {
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
 @media (max-width: 768px) {
     .tags {
-        width: 100%; /* Ancho completo para dispositivos móviles */
+        position: absolute;
+        bottom: 0; /* Coloca las etiquetas en la parte inferior */
+        left: 0; /* Alinea las etiquetas a la izquierda */
+        width: 100%; /* Abarca el ancho completo */
+        padding: 10px; /* Agrega un poco de espacio entre la foto y las etiquetas */
+        box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    }
+
+    .tags span {
+        display: block; /* Hace que las etiquetas ocupen el ancho completo de su contenedor */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 5px; /* Agrega un espacio entre etiquetas */
     }
 }
 
