@@ -41,7 +41,7 @@ main {
 }
 
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .tags {
         position: absolute;
         bottom: 0;
@@ -55,7 +55,7 @@ main {
 }
 
 /* Media Queries para dispositivos con un ancho mínimo de 768px (pantallas grandes) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
