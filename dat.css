@@ -16,6 +16,7 @@ main {
 
 .photo {
     margin-bottom: 20px;
+    position: relative; /* Para poder posicionar las etiquetas con respecto a la foto */
 }
 
 .photo img {
@@ -40,6 +41,22 @@ main {
 @media (max-width: 768px) {
     .tags {
         width: 100%; /* Ancho completo para dispositivos móviles */
+    }
+    
+    .photo .tags {
+        position: absolute;
+        bottom: 0; /* Posiciona las etiquetas en la parte inferior de la foto */
+        left: 0; /* Alinea las etiquetas a la izquierda */
+        width: 100%; /* Ancho completo para las etiquetas */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para las etiquetas */
+        color: white; /* Texto blanco para las etiquetas */
+        padding: 5px; /* Espaciado interno de las etiquetas */
+        box-sizing: border-box; /* Incluye el padding en el ancho y alto */
+    }
+
+    .photo .tags span {
+        display: block; /* Muestra cada etiqueta en una línea separada */
+        margin-bottom: 5px; /* Espacio entre cada etiqueta */
     }
 }
 
