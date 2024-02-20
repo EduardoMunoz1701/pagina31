@@ -43,8 +43,9 @@ main {
 /* Media Queries para dispositivos con un ancho máximo de 768px (teléfonos) */
 @media (max-width: 768px) {
     .tags {
-        position: static; /* Cambia la posición a estática para que se apilen debajo de la imagen */
+        position: relative; /* Cambia la posición a relativa para que se muestren debajo de las imágenes */
         width: auto; /* Restaura el ancho automático */
+        text-align: left; /* Alinea las etiquetas a la izquierda */
     }
 
     .tags span {
